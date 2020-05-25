@@ -1,7 +1,7 @@
 # custom-nginx-ingress-errors
 Assets to build a container to provide a custom default backend to the nginx-ingress Kubernetes Ingress controller
 
-![404 Screenshot](https://github.com/kenmoini/simple-static-default-backend/raw/master/404-screenshot.png)
+![404 Screenshot](https://github.com/kenmoini/custom-nginx-ingress-errors/raw/master/404-screenshot.png)
 
 ## Editing Error Pages
 
