@@ -43,3 +43,14 @@ jobs:
 
       - name: Build and push Docker images
         uses: docker/build-push-action@v2.2.2
+        with:
+          context: ./
+          file: ./Dockerfile
+          builder: ${{ steps.buildx.outputs.name }}
+          push: true
+          tags:  madd0c/custom-ingress-nginx-errors:latest
+          cache-from: type=local,src=/tmp/.buildx-cache
+          cache-to: type=local,dest=/tmp/.buildx-cache
+          
+      - name: Image digest
+        run: echo ${{ steps.docker_build.outputs.digest }}          
