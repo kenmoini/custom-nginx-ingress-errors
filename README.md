@@ -20,7 +20,7 @@ These instructions assume that you deployed this in the default `ingress-nginx` 
 
 1. Modify the `k8s-deployment.yaml` file to point to your custom built image, or use it as is for some snazzy error pages
 2. Deploy to the Kubernetes cluster: `kubectl apply -f k8s-deployment.yaml`
-3. Modify the `ingress-nginx/ingress-nginx-controller` Deployment and set the value of the `--default-backend-service` flag to the name of the newly created error backend, which should be `ingress-nginx/nginx-errors` by default.
-4. Edit the `ingress-nginx/nginx-configuration` ConfigMap  and add the key:value pair of `"custom-http-errors": "404,500,503"`
+3. Modify the `ingress-nginx/ingress-nginx-controller` Deployment and set the value of the `--default-backend-service` arg flag to the name of the newly created error backend, which should be `ingress-nginx/nginx-errors` by default.
+4. Edit the `ingress-nginx/ingress-nginx-controller` ConfigMap  and add the key:value pair of `custom-http-errors: '404,500,503'`
 5. ??????
 6. PROFIT!!!!1
