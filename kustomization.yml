@@ -1,0 +1,9 @@
+# This is mostly just here so it can also be called during the deployment of the ingress itself
+
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: ingress-nginx
+
+bases:
+  - k8s-deployment.yaml
