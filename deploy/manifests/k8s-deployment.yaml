@@ -38,7 +38,7 @@ spec:
     spec:
       containers:
       - name: nginx-error-server
-        image: kenmoini/custom-nginx-ingress-errors:latest
+        image: quay.io/kenmoini/ingress-custom-error-pages:latest
         ports:
         - containerPort: 8080
         # Setting the environment variable DEBUG we can see the headers sent 
