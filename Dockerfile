@@ -1,3 +1,3 @@
-FROM quay.io/kubernetes-ingress-controller/custom-error-pages-amd64:0.4
+FROM quay.io/kenmoini/ingress-custom-error-pages:latest
 
 COPY www /www
